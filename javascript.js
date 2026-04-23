@@ -1,7 +1,9 @@
 
 function makeGrid(nr) {
+    const container = document.querySelector("#container")
+    const square = document.querySelectorAll(".square-style")
+    square.forEach(square => square.remove())
     for (let i = 0; i < nr; i++) {
-        const container = document.querySelector("#container")
         const squareLine = document.createElement("div")
         squareLine.classList.add("square-line")
         container.appendChild(squareLine)
@@ -15,3 +17,5 @@ function makeGrid(nr) {
 }
 
 makeGrid(16)
+const button = document.querySelector("#buttonNew")
+button.addEventListener("click", (e) => { const input = prompt("How many squares per side?", "16"); makeGrid(input) })
