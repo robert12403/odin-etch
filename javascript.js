@@ -10,7 +10,13 @@ function makeGrid(nr) {
             container.appendChild(squareLine)
             for (let j = 0; j < nr; j++) {
                 const square = document.createElement("div")
-                square.addEventListener("mouseenter", () => square.style.backgroundColor = "blue")
+                const rand = Math.random();
+                if (rand < 0.33)
+                    square.addEventListener("mouseenter", () => square.style.backgroundColor = "blue")
+                else if (rand > 0.66)
+                    square.addEventListener("mouseenter", () => square.style.backgroundColor = "red")
+                else
+                    square.addEventListener("mouseenter", () => square.style.backgroundColor = "green")
                 square.classList.add("square-style")
                 squareLine.appendChild(square)
             }
