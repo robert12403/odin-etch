@@ -1,0 +1,15 @@
+.square-style {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.square-line {
+    display: flex;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
